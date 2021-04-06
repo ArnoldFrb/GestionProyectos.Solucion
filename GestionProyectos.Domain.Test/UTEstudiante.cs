@@ -27,7 +27,7 @@ namespace GestionProyectos.Domain.Test
             // ACT // ACCION // CUANDO // WHEN
             var resultado = estudiante.ModificarContraseña("@#Hl1g2l34");
             //ASSERT //AFIRMACION //ENTONCES //THEN
-            Assert.Pass("No puede ingresar una contraseña igual a la registrada, pruebe de nuevo", resultado);
+            Assert.Pass("No puede ingresar contraseña igual a la registrada, pruebe de nuevo", resultado);
         }
 
         /*
