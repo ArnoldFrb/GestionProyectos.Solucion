@@ -15,6 +15,11 @@ namespace GestionProyectos.Domain
             Comentario = comentario;
         }
 
+        public Obsercion()
+        {
+        }
+
+        /*
         public string ValidarNombre(string nombre)
         {
             if (nombre.Length == 0)
@@ -41,6 +46,6 @@ namespace GestionProyectos.Domain
                 return "Registro Exitozo, Se ha registrado el nuevo Comentario";
             }
             throw new NotImplementedException();
-        }
+        }*/
     }
 }

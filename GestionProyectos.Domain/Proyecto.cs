@@ -6,18 +6,23 @@ namespace GestionProyectos.Domain
 {
     public class Proyecto
     {
-        private int Id { get; set; }
+        public int Id { get; private set; }
         private string Nombre  { get; set; }
         private string Resumen { get; set; }
+        private string Ruta { get; set; }
+
 
         private Obsercion Obsercion;
         private Evaluacion Evaluacion;
+        private AsesorTematico asesorTematico;
+        private AsesorMetodologico asesorMetodologico;
 
-        public Proyecto(int id, string nombre, string resumen)
+        public Proyecto(int id, string nombre, string resumen, string ruta)
         {
             Id = id;
             Nombre = nombre;
             Resumen = resumen;
+            Ruta = ruta;
         }
 
         public string ValidarNombre(string nombre)
@@ -53,6 +58,28 @@ namespace GestionProyectos.Domain
                 Nombre = resumen;
                 return "Registro Exitozo, Se ha registrado el nuevo Resumen";
             }
+            throw new NotImplementedException();
+        }
+
+        public string Observar(Obsercion obsercion)
+        {
+            Obsercion = obsercion;
+            return "Nueva Observacon";
+        }
+
+        public string Evaluar(Evaluacion evaluacion)
+        {
+            Evaluacion = evaluacion;
+            return "Nueva Evaluacion";
+        }
+
+        public string AsignarAsesorTematico()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AsignarAsesorMetodologico()
+        {
             throw new NotImplementedException();
         }
     }

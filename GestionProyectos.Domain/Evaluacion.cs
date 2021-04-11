@@ -17,6 +17,7 @@ namespace GestionProyectos.Domain
             Estado = estado;
         }
 
+        /*
         public string ValidarNombre(string nombre)
         {
             if (nombre.Length == 0)
@@ -43,7 +44,7 @@ namespace GestionProyectos.Domain
                 return "Registro Exitozo, Se ha registrado el nuevo Comentario";
             }
             throw new NotImplementedException();
-        }
+        }*/
 
         public string Evaluar(bool estado)
         {
@@ -53,6 +54,7 @@ namespace GestionProyectos.Domain
             }
             if (Estado != estado)
             {
+                Estado = estado;
                 return "Registro Exitozo, El estado a sido modificado";
             }
             throw new NotImplementedException();
